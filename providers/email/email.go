@@ -30,12 +30,12 @@ type Provider struct {
 }
 
 type Config struct {
-	Server                   SMTPServer
-	From                     string
-	MaxAge                   time.Duration
-	SendVerificationRequest  func(params VerificationRequestParams) error
+	Server                    SMTPServer
+	From                      string
+	MaxAge                    time.Duration
+	SendVerificationRequest   func(params VerificationRequestParams) error
 	GenerateVerificationToken func() (string, error)
-	NormalizeIdentifier      func(identifier string) string
+	NormalizeIdentifier       func(identifier string) string
 }
 
 type SMTPServer struct {
